@@ -3,7 +3,7 @@ Gemini Sound MDJ CDJ DJ Media Player tools
 
 ## Introduction
 
-I wanted to learn how to DJ using 'CDJ's but of course the market monopoly of Pioneer DJ means that genuine CDJ equipment is extremely expensive, especially when two units are involved. Instead, I chose a copycat device from [Gemini Sound](https://geminisound.com) called the [MDJ-900](https://geminisound.com/products/mdj-900). These are based on Linux 2.6 kernel and implement a similar network approach that Pioneer DJ units do, i.e. you can connect them to their own network switch and share a single USB stick across all of the MDJ players. Additionally you can define one player to provide 'master sync' and any client players will follow the tempo.
+I wanted to learn how to DJ using 'CDJ's but the market monopoly of Pioneer DJ means that genuine CDJ equipment is extremely expensive, especially when two units are involved. Instead, I chose a copycat device from [Gemini Sound](https://geminisound.com) called the [MDJ-900](https://geminisound.com/products/mdj-900). These are based on Linux 2.6 kernel and implement a similar network approach that Pioneer DJ units do, i.e. you can connect them to their own network switch and share a single USB stick across all of the MDJ players. Additionally you can define one player to provide 'master sync' and any client players will follow the tempo.
 
 Since I love tinkering with systems, I wanted to achieve three things:
 
@@ -46,3 +46,6 @@ I use a Mac, so I needed to set up the NFS server. This was mercifully simple.
  - Transcode file formats
  - Serato Playlists / Crate conversion
 
+
+
+find ../*mp3 -print0 | xargs -0 -n 1 python3 ~/mdj-900-tools/update_geminidb.py
